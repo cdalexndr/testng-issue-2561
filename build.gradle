@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.named('wrapper') {
+    gradleVersion = '6.5.1'
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+}
+
+test {
+    useTestNG() {}
+}
